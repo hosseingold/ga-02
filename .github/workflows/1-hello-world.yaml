@@ -1,12 +1,23 @@
+```yaml
 name: 1 - hello - world
-on: push
+
+on: workflow_dispatch 
 
 jobs:
     first-job:
         runs-on: ubuntu-latest
         steps:
-            - name: print hello
-             run: echo "hello world"
-            - name: print Goodbye
-             run: echo "Goodbye"
+            - name: Print hello 
+              run: echo "Hello World"
+    second-job:
+        runs-on: ubuntu-latest
+        steps:
+             - name: Print Hi to you
+               run: echo "Hi to you" 
 
+             - name: I will suc.
+               run: exit 0
+
+             - name: Say Goodbye
+               run: echo "Goodbye"              
+```
